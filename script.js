@@ -27,3 +27,17 @@ $('#numInK').keyup(function(){
   }
 })
 .keyup();
+
+$('#numInCost').keyup(function(){
+  let numConv = $(this).val();
+  var numOutTen = numConv/0.0000365;
+  var numTenTotal = Math.ceil(numOutTen);
+  var numOutPool = numConv/4.1;
+  var numPoolTotal = Math.ceil(numOutPool);
+  var numOutFoot = numConv/0.163;
+  var numFootTotal = Math.ceil(numOutFoot);
+  $('#nurse').text(numTenTotal);
+  $('#burjj').text(numPoolTotal);
+  $('#mbappe').text(numFootTotal);
+})
+.keyup();
